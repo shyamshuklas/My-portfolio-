@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shyam Shukla — BCA student and aspiring software engineer.">
+  <title>Shyam Shukla | Portfolio</title>
+  <style>
+    :root{--bg:#080b18;--panel:rgba(255,255,255,.065);--line:rgba(255,255,255,.14);--blue:#86a0ff;--purple:#c084fc;--text:#f5f6ff;--muted:#aeb5cc}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:85px}
+    body{font-family:Inter,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+    body:before,body:after{content:"";position:fixed;width:390px;height:390px;border-radius:50%;filter:blur(130px);opacity:.24;z-index:-1;pointer-events:none}
+    body:before{background:#4f46e5;top:-160px;left:-130px}body:after{background:#9333ea;right:-160px;bottom:-150px}
+    a{color:inherit;text-decoration:none}.container{width:min(1100px,90%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(8,11,24,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{font-weight:850;font-size:1.3rem;letter-spacing:-.5px}.logo span,.gradient{background:linear-gradient(120deg,var(--blue),var(--purple));color:transparent;background-clip:text;-webkit-background-clip:text}
+    .nav-links{display:flex;gap:22px;list-style:none;color:var(--muted);font-size:.9rem}.nav-links a:hover{color:#fff}
+    .glass{background:var(--panel);border:1px solid var(--line);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:22px;box-shadow:0 15px 45px #0002}
+    .btn{display:inline-block;padding:11px 20px;border-radius:12px;background:linear-gradient(120deg,#6388ff,#a66bfa);color:#fff;font-weight:700;border:1px solid transparent;transition:.25s}
+    .btn:hover{transform:translateY(-3px);box-shadow:0 10px 28px #7c5cff35}.btn-outline{background:transparent;border-color:var(--line)}
+    .hero{min-height:83vh;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:55px;padding:70px 0}
+    .eyebrow{display:inline-block;border:1px solid var(--line);background:var(--panel);border-radius:30px;padding:5px 13px;color:#c6d0ff;font-size:.85rem;margin-bottom:22px}
+    h1{font-size:clamp(2.7rem,6vw,5rem);line-height:1.08;letter-spacing:-2px;margin-bottom:20px}.hero-copy{max-width:600px;color:var(--muted);margin-bottom:27px}
+    .actions{display:flex;gap:13px;flex-wrap:wrap}.profile-wrap{display:flex;justify-content:center}
+    .profile-card{position:relative;width:min(340px,100%);aspect-ratio:4/5;overflow:hidden;border-radius:28px;background:linear-gradient(145deg,#7c9cff35,#c084fc12);border:1px solid #ffffff28}
+    .profile-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%}
+    .profile-caption{position:absolute;bottom:0;left:0;width:100%;padding:55px 20px 20px;background:linear-gradient(transparent,rgba(5,8,20,.96))}
+    .profile-caption h2{font-size:1.45rem}.profile-caption p{font-size:.9rem;color:#d4daf1}
+    section{padding:78px 0}.section-heading{text-align:center;margin-bottom:38px}.section-heading h2{font-size:clamp(2rem,4vw,2.7rem);letter-spacing:-1px}.section-heading p{color:var(--muted);margin-top:7px}
+    .about{padding:30px;text-align:center;max-width:850px;margin:auto;color:#c5cbe0}.about strong{color:white}
+    .grid{display:grid;gap:19px}.skills-grid{grid-template-columns:repeat(4,1fr)}.skill{padding:22px 15px;text-align:center;transition:.25s}.skill:hover,.project:hover{transform:translateY(-5px);border-color:#879cff88}
+    .skill-icon{font-size:1.8rem}.skill h3{font-size:1rem;margin-top:5px}.skill p{font-size:.83rem;color:var(--muted)}
+    .projects-grid{grid-template-columns:repeat(3,1fr)}.project{padding:24px;display:flex;flex-direction:column;transition:.25s}.project-num{color:var(--blue);font-size:.85rem;font-weight:750}.project h3{margin:10px 0}.project p{color:var(--muted);font-size:.93rem;flex:1}
+    .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}.tag{font-size:.77rem;color:#d2d8ff;border:1px solid var(--line);padding:3px 9px;border-radius:30px}
+    .timeline{max-width:850px;margin:auto;border-left:2px solid #8297ff80;padding-left:28px}.education-card{position:relative;padding:25px;margin-bottom:24px}.dot{position:absolute;width:14px;height:14px;left:-36px;top:29px;border-radius:50%;background:var(--blue);box-shadow:0 0 14px var(--blue)}
+    .edu-head{display:flex;justify-content:space-between;align-items:flex-start;gap:15px}.edu-head h3{font-size:1.08rem}.year{font-size:.85rem;color:#c7d0ff;white-space:nowrap}.institution{color:var(--muted);margin:8px 0}.education-card ul{padding-left:20px;color:#d2d6e8;font-size:.93rem}
+    .contact-card{max-width:750px;margin:auto;padding:30px;text-align:center}.contact-card p{color:var(--muted);margin:8px 0 22px}.contact-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    footer{border-top:1px solid var(--line);padding:24px 0;text-align:center;color:var(--muted);font-size:.88rem}
+    @media(max-width:800px){.nav-links{gap:12px;font-size:.82rem}.hero{grid-template-columns:1fr;gap:35px;padding:60px 0}.hero-content{text-align:center}.hero-copy{margin-left:auto;margin-right:auto}.actions{justify-content:center}.profile-wrap{grid-row:1}.profile-card{width:min(280px,85%)}.skills-grid{grid-template-columns:repeat(2,1fr)}.projects-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:540px){nav{align-items:flex-start;padding:15px 0;flex-direction:column}.nav-links{width:100%;overflow-x:auto;padding-bottom:4px;white-space:nowrap}.projects-grid{grid-template-columns:1fr}.education-card{padding:19px}.edu-head{flex-direction:column;gap:2px}.section-heading{margin-bottom:28px}section{padding:58px 0}.about,.contact-card{padding:23px}}
+  </style>
+</head>
+<body>
+<header>
+  <nav class="container">
+    <a class="logo" href="#home">Shyam<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="container hero" id="home">
+    <div class="hero-content">
+      <span class="eyebrow">BCA Student · Aspiring Software Engineer</span>
+      <h1>Hi, I'm<br><span class="gradient">Shyam Shukla</span></h1>
+      <p class="hero-copy">I'm learning programming and building my foundation in software development. Explore my skills, learning journey, and projects here.</p>
+      <div class="actions"><a class="btn" href="#projects">Explore Projects ↗</a><a class="btn btn-outline" href="#contact">Get in Touch</a></div>
+    </div>
+    <div class="profile-wrap">
+      <div class="profile-card glass">
+        <img class="profile-image" src="profile.jpg" alt="Shyam Shukla profile photo">
+        <div class="profile-caption"><h2>Shyam Shukla</h2><p>BCA Student · Future Software Engineer</p></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="about"><div class="container">
+    <div class="section-heading"><h2>About <span class="gradient">Me</span></h2><p>A little introduction</p></div>
+    <div class="about glass">I'm a first-year <strong>Bachelor of Computer Applications (BCA)</strong> student at Siddharth University. I'm interested in programming, logical problem-solving, and software development. Currently, I'm strengthening my fundamentals and working on beginner-friendly projects as I grow toward becoming a software engineer.</div>
+  </div></section>
+
+  <section id="skills"><div class="container">
+    <div class="section-heading"><h2>My <span class="gradient">Skills</span></h2><p>Technologies and concepts I'm learning</p></div>
+    <div class="grid skills-grid">
+      <div class="skill glass"><div class="skill-icon">💻</div><h3>C Programming</h3><p>Fundamentals & loops</p></div>
+      <div class="skill glass"><div class="skill-icon">🐍</div><h3>Python</h3><p>Learning in progress</p></div>
+      <div class="skill glass"><div class="skill-icon">🌐</div><h3>HTML & CSS</h3><p>Web page development</p></div>
+      <div class="skill glass"><div class="skill-icon">🧠</div><h3>Problem Solving</h3><p>Logic & algorithms</p></div>
+    </div>
+  </div></section>
+
+  <section id="projects"><div class="container">
+    <div class="section-heading"><h2>My <span class="gradient">Projects</span></h2><p>A few projects to showcase my learning</p></div>
+    <div class="grid projects-grid">
+      <article class="project glass"><span class="project-num">PROJECT 01</span><h3>Personal Portfolio</h3><p>A responsive personal website to introduce myself, highlight my skills, and share my education journey.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Responsive</span></div></article>
+      <article class="project glass"><span class="project-num">PROJECT 02</span><h3>C Programming Practice</h3><p>A collection of beginner programs covering loops, arrays, factorials, and basic calculations.</p><div class="tags"><span class="tag">C</span><span class="tag">Arrays</span><span class="tag">Loops</span></div></article>
+      <article class="project glass"><span class="project-num">PROJECT 03</span><h3>Learning Python</h3><p>A growing set of practice exercises to develop programming fundamentals and problem-solving skills.</p><div class="tags"><span class="tag">Python</span><span class="tag">Basics</span></div></article>
+    </div>
+  </div></section>
+
+  <section id="education"><div class="container">
+    <div class="section-heading"><h2>My <span class="gradient">Education</span></h2><p>My academic journey</p></div>
+    <div class="timeline">
+      <article class="education-card glass"><span class="dot"></span><div class="edu-head"><h3>Bachelor of Computer Applications (BCA)</h3><span class="year">2026 – Present</span></div><p class="institution">Siddharth University, Uttar Pradesh</p><ul><li>Currently studying in BCA 1st Year.</li><li>Relevant learning: Computer Fundamentals and C Programming.</li><li>Building a foundation in programming and software development.</li></ul></article>
+      <article class="education-card glass"><span class="dot"></span><div class="edu-head"><h3>Class 12 – Senior Secondary</h3><span class="year">2026</span></div><p class="institution">Urmila Educational Academy, Basti, Uttar Pradesh</p><p class="institution">Central Board of Secondary Education (CBSE)</p><ul><li>Completed Senior Secondary Education in 2026.</li><li>Studied under the CBSE curriculum.</li></ul></article>
+    </div>
+  </div></section>
+
+  <section id="contact"><div class="container">
+    <div class="section-heading"><h2>Let's <span class="gradient">Connect</span></h2><p>Have a project idea or want to connect?</p></div>
+    <div class="contact-card glass"><h3>Thanks for visiting my portfolio!</h3><p>I'm continuing to learn and build new things. You can add your email and social links here when ready.</p><div class="contact-links"><a class="btn" href="mailto:your.email@example.com">Email Me</a><a class="btn btn-outline" href="#home">Back to Top ↑</a></div></div>
+  </div></section>
+</main>
+<footer><div class="container">© <span id="year"></span> Shyam Shukla · Built with HTML & CSS</div></footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
